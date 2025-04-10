@@ -44,6 +44,7 @@ header nav .logo {
     margin-left: 20px;
     transition: opacity 0.3s ease;
 }
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -73,6 +74,7 @@ header nav ul li a:hover {
     padding: 100px 20px;
     background-position: center;
     background-size: cover;
+    padding-top: 120px; /* Adjusted to account for the header */
 }
 
 .hero h1 {
@@ -101,6 +103,7 @@ header nav ul li a:hover {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 120px; /* Adjusted to account for the header */
 }
 
 .content h2 {
@@ -125,6 +128,7 @@ header nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 120px; /* Adjusted to account for the header */
 }
 
 .contact-section h1 {
@@ -154,6 +158,7 @@ header nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 120px; /* Adjusted to account for the header */
 }
 
 .faq-section h2 {
@@ -214,11 +219,13 @@ header nav ul li a:hover {
 .donate-section p {
     font-size: 1.5rem; /* Adjust the font size of the message */
 }
+
 /* Styling for the Get Involved Form */
 .get-involved-section {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    padding-top: 120px; /* Adjusted to account for the header */
 }
 
 form {
@@ -251,7 +258,6 @@ form button {
 form button:hover {
     background-color: #555;
 }
-
 
 footer {
     background: #333;
