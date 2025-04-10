@@ -128,14 +128,14 @@ header nav ul li a:hover {
     position: relative;
     width: 80%;
     margin: 50px auto;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to only show 3 articles */
 }
 
 .articles-container {
     display: flex;
-    overflow-x: auto;
     gap: 20px;
     scroll-behavior: smooth;
+    transition: transform 0.3s ease-in-out; /* Smooth scroll transition */
 }
 
 .article {
@@ -156,10 +156,11 @@ header nav ul li a:hover {
 }
 
 .article h3 {
-    font-size: 1.2rem; /* Keeping the original font size */
+    font-size: 1.2rem;
     margin-top: 10px;
 }
 
+/* Scroll Buttons */
 .scroll-left,
 .scroll-right {
     position: absolute;
@@ -186,6 +187,7 @@ header nav ul li a:hover {
 .scroll-right:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 /* Footer Section */
 footer {
@@ -334,5 +336,3 @@ form button {
 form button:hover {
     background-color: #555;
 }
-
-
