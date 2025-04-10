@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Header Section -->
     <header>
         <nav>
             <div class="logo-container">
@@ -21,19 +24,75 @@
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Hero Section -->
     <section class="hero">
         <h1>Increasing Awareness about Melanoma</h1>
         <p>We are an organization focused on making a difference!</p>
     </section>
 
+    <!-- Content Section -->
     <section class="content">
         <h2>Who We Are</h2>
         <p>M.U.R.E. is dedicated to raising melanoma awareness globally, funding groundbreaking research, and providing access to life-saving treatments for melanoma, the deadliest form of skin cancer. We are committed to protecting vulnerable populations through education on prevention and early detection, while supporting underfunded hospitals and communities in need of affordable care. By funding innovative research and advocating for equitable healthcare, we strive to reduce the global impact of melanoma and ensure that everyone, regardless of their background, has the opportunity to live a healthier, longer life.</p>
     </section>
 
+    <!-- Article Preview Section with Horizontal Scroll -->
+    <section class="article-preview">
+        <button class="scroll-left">&#8592;</button>
+        <div class="articles-container">
+            <div class="article">
+                <img src="images/article1.jpg" alt="Article 1">
+                <h3>Article 1</h3>
+            </div>
+            <div class="article">
+                <img src="images/article2.jpg" alt="Article 2">
+                <h3>Article 2</h3>
+            </div>
+            <div class="article">
+                <img src="images/article3.jpg" alt="Article 3">
+                <h3>Article 3</h3>
+            </div>
+            <div class="article">
+                <img src="images/article4.jpg" alt="Article 4">
+                <h3>Article 4</h3>
+            </div>
+            <div class="article">
+                <img src="images/article5.jpg" alt="Article 5">
+                <h3>Article 5</h3>
+            </div>
+            <!-- More articles can be added here -->
+        </div>
+        <button class="scroll-right">&#8594;</button>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Your Organization Name. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Scroll Functionality -->
+    <script>
+        // Get the container and the scroll buttons
+        const articlesContainer = document.querySelector('.articles-container');
+        const scrollLeftBtn = document.querySelector('.scroll-left');
+        const scrollRightBtn = document.querySelector('.scroll-right');
+
+        // Add click event listeners for scrolling
+        scrollLeftBtn.addEventListener('click', () => {
+            articlesContainer.scrollBy({
+                left: -300, // Scroll by 300px to the left
+                behavior: 'smooth',
+            });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            articlesContainer.scrollBy({
+                left: 300, // Scroll by 300px to the right
+                behavior: 'smooth',
+            });
+        });
+    </script>
 </body>
+
 </html>
