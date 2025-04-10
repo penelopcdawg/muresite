@@ -30,3 +30,42 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//carousel
+
+let currentIndex = 0; // Keep track of the current position of the carousel
+
+const articlesContainer = document.querySelector('.articles-container');
+const scrollLeftButton = document.querySelector('.scroll-left');
+const scrollRightButton = document.querySelector('.scroll-right');
+
+// Number of articles shown at once
+const itemsVisible = 3;
+const totalItems = document.querySelectorAll('.article').length; // Total number of articles
+
+// Handle left scroll
+scrollLeftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalItems - itemsVisible;
+    }
+    updateCarouselPosition();
+});
+
+// Handle right scroll
+scrollRightButton.addEventListener('click', () => {
+    if (currentIndex < totalItems - itemsVisible) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Loop back to the start
+    }
+    updateCarouselPosition();
+});
+
+// Update the position of the carousel
+function updateCarouselPosition() {
+    const offset = -currentIndex * (document.querySelector('.article').offsetWidth + 20); // 20px is the gap between articles
+    articlesContainer.style.transform = `translateX(${offset}px)`;
+}
+
