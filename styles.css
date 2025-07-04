@@ -366,11 +366,15 @@ footer {
 }
 
 .article-banner {
-    background-color: black;
-    color: white;
-    padding: 20px;
+    background-color: #007BFF; /* Bright blue */
+    color: #ffffff;            /* White text for contrast */
+    padding: 30px 20px;
     text-align: center;
     font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional depth */
+    border-radius: 8px;        /* Optional rounded corners */
 }
 
 .article-content {
