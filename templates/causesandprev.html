@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Causes and Prevention of Melanoma</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <div class="top-spacer"></div>
@@ -13,14 +14,15 @@
     <header>
         <nav>
             <div class="logo-container">
-                <img src="mure-images/murelogo.JPG" alt="Logo" class="logo"> 
+                <img src="{{ url_for('static', filename='mure-images/murelogo.JPG') }}" alt="Logo" class="logo"> 
             </div>
             <ul>
-                <li><a href="index.html">Who We Are</a></li>
-                <li><a href="donate.html">Donate Now</a></li>
-                <li><a href="getinvolved.html">Get Involved</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="{{ url_for('index') }}">Who We Are</a></li>
+                <li><a href="{{ url_for('donate') }}">Donate Now</a></li>
+                <li><a href="{{ url_for('getinvolved') }}">Get Involved</a></li>
+                <li><a href="{{ url_for('causesandprev') }}">Causes and Prevention</a></li>
+                <li><a href="{{ url_for('articles') }}">Articles</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -52,7 +54,8 @@
 
 
             <div class="graph-container">
-                <img src="mure-images/causesandprevgraph.png" alt="Graph Description" class="graph-image">
+                <img src="{{ url_for('static', filename='mure-images/causesandprevgraph.png') }}" alt="Graph Description" class="graph-image">
+
             </div>
             <p>
                 In recent years, melanoma has become increasingly prevalent. According to the Surveillance, Epidemiology, and End Results (SEER) Program, the age-adjusted rates for new melanoma cases have increased by approximately 1.1% annually from 2012 to 2021. This increase is attributed to factors like increased UV exposure from sunlight and artificial sources like tanning beds, but also stemming from environmental changes that elevate UV levels like the hole in the ozone layer. Melanoma is a serious but often preventable disease. By being mindful of your risk factors, you can take steps to protect yourself. Prevention and early detection saves lives. </p>
