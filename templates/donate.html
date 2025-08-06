@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Now</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo-container">
-                <img src="mure-images/murelogo.JPG" alt="Logo" class="logo"> <!-- Logo -->
+                <img src="{{ url_for('static', filename='mure-images/murelogo.JPG') }}" alt="Logo" class="logo">
             </div>
             <ul>
-                <li><a href="index.html">Who We Are</a></li>
-                <li><a href="donate.html">Donate Now</a></li>
-                <li><a href="getinvolved.html">Get Involved</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="{{ url_for('index') }}">Who We Are</a></li>
+                <li><a href="{{ url_for('donate') }}">Donate Now</a></li>
+                <li><a href="{{ url_for('getinvolved') }}">Get Involved</a></li>
+                <li><a href="{{ url_for('causesandprev') }}">Causes and Prevention</a></li>
+                <li><a href="{{ url_for('articles') }}">Articles</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
             </ul>
         </nav>
     </header>
